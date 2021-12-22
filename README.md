@@ -1,19 +1,27 @@
-# npm-vue-cli-3
+## Step 1 - Add Vueform package
 
-## Project setup
+Move your vueform instance to `packages` folder. Eg: `./packages/vueform-0.0.0-YOUR_KEY`.
+
+## Step 2 - Replace folder name in `package.json`
+
+Open `package.json` and replace the following line with your actual folder name:
+
 ```
-npm install
+// package.json
+
+{
+  "dependencies": {
+    "@vueform/vueform": "file:./packages/vueform-VERSION-KEY",
+    // ...
+  },
+  // ...
+}
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Step 3 - install dependencies
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Run `npm install` to install dependencies.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Step 4 - run development server
+
+Run `npm run serve` to start the development server.
